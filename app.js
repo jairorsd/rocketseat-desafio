@@ -1,14 +1,13 @@
-const checkbox = document.querySelector('#switch');
+const toggle = document.querySelector('#switch');
 const body = document.querySelector('body');
 
-checkbox.onchange = trocaTema;
+toggle.onchange = trocaDeTema;
 
-function trocaTema() {
+function trocaDeTema() {
+
     if(this.checked) {
-        body.className = body.className.replace('dark-mode', '');
-        body.classList.add('light-mode');
+        body.className = body.className.replace('dark-mode', 'light-mode');
     } else {
-        body.className = body.className.replace('light-mode', '');
-        body.classList.add('dark-mode');
+        body.className = body.className.replace('light-mode', 'dark-mode');
     };
 };
